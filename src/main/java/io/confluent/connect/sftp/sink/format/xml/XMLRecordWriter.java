@@ -8,18 +8,18 @@ import org.apache.kafka.connect.errors.ConnectException;
 import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.FileWriter;
+import java.io.OutputStreamWriter;
 import java.io.IOException;
 import java.io.StringReader;
 
 public class XMLRecordWriter implements RecordWriter {
 
-    private final FileWriter writer;
+    private final OutputStreamWriter writer;
     private final SftpOutputStream sftpOut;
 
     XMLRecordWriter(final SftpSinkStorage storage, final String filename) throws IOException {
         this.sftpOut = storage.create(filename, true);
-        this.writer  = new FileWriter(filename);
+        this.writer  = new OutputStreamWriter(this.sftpOut);
     }
 
     /**
