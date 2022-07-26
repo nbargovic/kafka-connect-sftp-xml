@@ -17,7 +17,9 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'org.apache.kafka:connect-api:2.8.1'
+    implementation 'io.confluent:kafka-connect-storage-common:10.0.12'
     implementation 'io.confluent:kafka-connect-storage-format:10.0.12'
+    implementation 'io.confluent:kafka-connect-storage-core:10.0.12'
 }
 
 test {

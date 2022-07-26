@@ -10,8 +10,14 @@ This SFTP Sink File Formatter will NOT:
 - apply schema to the xml
 - validate the schema of the xml
 
-To build:
-`./gradlew jar`
+To Build:
+
+Requires JDK 1.8 to build the jar (example: java-1.8.0-openjdk-devel)
+
+Run: `./gradlew clean jar`
+
+Jar file will be generated in `./build/libs/kafka-connect-sftp-xml-1.0.0.jar`
 
 To Deploy:
+
 https://docs.confluent.io/kafka-connect-sftp/current/sink-connector/index.html#sftp-file-formats
