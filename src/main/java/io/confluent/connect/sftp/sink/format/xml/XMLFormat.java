@@ -41,6 +41,7 @@ public class XMLFormat implements Format<SftpSinkConnectorConfig, String> {
      *
      @throws UnsupportedOperationException if invoked.
      */
+    @SuppressWarnings("deprecation")
     @Override
     public Object getHiveFactory() {
         throw new UnsupportedOperationException(
